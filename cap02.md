@@ -625,6 +625,7 @@ Si la respuesta es sí, escribe un comentario explicando tu razonamiento.
 Siempre es más fácil eliminar comentarios innecesarios más adelante que tener que reconstruir la lógica de un código sin comentar.
 
 A partir de ahora, este libro incluirá comentarios en los ejemplos para ayudarte a entender mejor cada sección de código.
+
 ---
 ### PRUÉBALO TÚ MISMO
 
