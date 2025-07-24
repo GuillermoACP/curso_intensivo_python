@@ -430,3 +430,154 @@ Python tiene un método llamado removesuffix() que funciona igual que removepref
 Asigna 'python_notes.txt' a una variable llamada nombre_archivo, y luego usa removesuffix() para mostrar el nombre del archivo sin la extensión, como hacen algunos exploradores de archivos.
 
 ---
+
+## Números
+
+Los números se usan con frecuencia en programación: para llevar la puntuación en juegos, representar datos en gráficas, almacenar información en aplicaciones web, y mucho más.
+Python trabaja con números de diferentes formas, dependiendo de cómo se usen. Vamos a empezar con los números enteros, que son los más sencillos.
+
+### Enteros
+
+Puedes usar los operadores estándar de suma (+), resta (-), multiplicación (*) y división (/) con números enteros en Python:
+
+```
+>>> 2 + 3
+5
+>>> 3 - 2
+1
+>>> 2 * 6
+12
+>>> 3 / 2
+1.5
+```
+
+En una sesión interactiva, Python simplemente devuelve el resultado de la operación.
+
+Python también usa dos símbolos de multiplicación para representar exponentes:
+
+```
+>>> 3 ** 2
+9
+>>> 3 ** 3
+27
+>>> 10 ** 6
+1000000
+```
+
+Python respeta el orden de las operaciones matemáticas, así que puedes combinar varias operaciones en una sola expresión:
+
+```
+>>> 2 + 3 * 4
+14
+>>> (2 + 3) * 4
+20
+```
+
+Los espacios no afectan cómo se evalúa la expresión; simplemente ayudan a que el código sea más fácil de leer.
+
+### Flotantes
+
+Un número con un punto decimal se llama flotante o `(float)`.
+Este término es común en la mayoría de los lenguajes de programación y se refiere a que el punto decimal puede "flotar", es decir, aparecer en cualquier parte del número.
+
+Python maneja bien los flotantes, así que generalmente no tendrás que preocuparte por cómo se comportan:
+
+```
+>>> 0.1 + 0.1
+0.2
+>>> 0.2 + 0.2
+0.4
+>>> 2 * 0.1
+0.2
+>>> 2 * 0.2
+0.4
+```
+
+Sin embargo, a veces verás un resultado con más decimales de los esperados:
+
+```shell
+>>> 0.2 + 0.1
+0.30000000000000004
+>>> 3 * 0.1
+0.30000000000000004
+```
+
+Esto es normal en todos los lenguajes de programación y no debería preocuparte por ahora.
+Más adelante, en la Parte II del libro, aprenderás cómo controlar mejor la precisión decimal si lo necesitas.
+
+### Enteros y flotantes juntos
+
+Cuando divides dos números, aunque sean enteros y el resultado sea entero, Python devuelve un flotante:
+
+```
+>>> 4 / 2
+2.0
+```
+
+Si mezclas enteros y flotantes en cualquier otra operación, también obtendrás un flotante:
+
+```
+>>> 1 + 2.0
+3.0
+>>> 2 * 3.0
+6.0
+>>> 3.0 ** 2
+9.0
+```
+
+Python convierte automáticamente el resultado en flotante si algún número de la operación lo es.
+
+### Guiones bajos en números
+
+Cuando trabajas con números grandes, puedes usar guiones bajos (_) para agrupar los dígitos y hacerlos más legibles:
+
+```
+>>> edad_universo = 14_000_000_000
+>>> print(edad_universo)
+14000000000
+```
+
+Python ignora los guiones bajos al almacenar el valor.
+Puedes agrupar los dígitos como quieras: 1_000 es lo mismo que 10_00 o 1000 para Python.
+Esta característica funciona tanto para enteros como para flotantes.
+
+### Asignación múltiple
+
+Puedes asignar valores a varias variables en una sola línea, lo cual hace el código más limpio y legible. Por ejemplo:
+
+```
+>>> x, y, z = 0, 0, 0
+```
+
+Simplemente separa los nombres de las variables con comas, y haz lo mismo con los valores.
+Python se encarga de emparejarlos correctamente, siempre que la cantidad de variables y valores coincida.
+
+### Constantes
+
+Una constante es una variable cuyo valor no debería cambiar durante la ejecución del programa.
+
+Python no tiene constantes integradas como otros lenguajes, pero por convención, los programadores escriben los nombres de las constantes en mayúsculas:
+
+```
+MAX_CONEXIONES = 5000
+```
+
+Si ves una variable con nombre en mayúsculas, eso indica que su valor no debe modificarse.
+
+---
+### PRUÉBALO TÚ MISMO
+
+2-9. Número ocho
+Escribe operaciones de suma, resta, multiplicación y división que den como resultado el número 8.
+Usa print() para mostrar el resultado.
+Tu código debería incluir cuatro líneas como esta:
+
+print(5 + 3)
+
+Y la salida debe mostrar el número 8 una vez en cada línea.
+
+2-10. Número favorito
+Usa una variable para representar tu número favorito.
+Luego, crea un mensaje que revele ese número y muestra el mensaje con print().
+
+---
