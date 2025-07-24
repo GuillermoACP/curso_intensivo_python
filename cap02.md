@@ -581,3 +581,133 @@ Usa una variable para representar tu número favorito.
 Luego, crea un mensaje que revele ese número y muestra el mensaje con print().
 
 ---
+
+## Comentarios
+
+Los comentarios son una herramienta extremadamente útil en la mayoría de los lenguajes de programación. Hasta ahora, todo lo que has escrito en tus programas ha sido código Python. Pero a medida que tus programas se vuelvan más largos y complejos, necesitarás agregar notas dentro de ellos que describan tu enfoque general al resolver un problema.
+Un comentario te permite escribir estas notas en lenguaje natural, dentro del propio código.
+
+### ¿Cómo se escriben comentarios?
+
+En Python, el símbolo de almohadilla `(#)` indica un comentario.
+El intérprete de Python ignora todo lo que venga después de este símbolo en una línea.
+
+Por ejemplo, el archivo `comment.py` podría verse así:
+
+```python
+# Saluda a todos.
+print("¡Hola gente de Python!")
+```
+
+Python ignora la primera línea (el comentario) y ejecuta la segunda:
+
+```
+¡Hola gente de Python!
+```
+
+### ¿Qué tipo de comentarios deberías escribir?
+
+La razón principal para escribir comentarios es explicar qué hace tu código y cómo lo hace.
+Cuando estás trabajando activamente en un proyecto, todo tiene sentido porque tienes el contexto en mente. Pero si vuelves a ese mismo código semanas o meses después, es muy probable que olvides muchos detalles.
+
+Aunque puedes analizar el código para recordar cómo funciona, escribir buenos comentarios te ahorrará tiempo al resumir claramente tu lógica y tus decisiones.
+
+Si quieres convertirte en un programador profesional o colaborar con otras personas, necesitas escribir comentarios significativos. Hoy en día, la mayoría del software se desarrolla de forma colaborativa, ya sea por equipos dentro de una empresa o por comunidades de código abierto.
+
+Los programadores experimentados esperan encontrar comentarios en el código, así que es buena idea empezar desde ahora a incluirlos.
+Comentar tu código de forma clara y concisa es uno de los mejores hábitos que puedes desarrollar como programador principiante.
+
+Cuando dudes si vale la pena escribir un comentario, pregúntate:
+
+    ¿Tuve que pensar en varias formas de resolver esto antes de encontrar una solución que funcionara?
+
+Si la respuesta es sí, escribe un comentario explicando tu razonamiento.
+Siempre es más fácil eliminar comentarios innecesarios más adelante que tener que reconstruir la lógica de un código sin comentar.
+
+A partir de ahora, este libro incluirá comentarios en los ejemplos para ayudarte a entender mejor cada sección de código.
+---
+### PRUÉBALO TÚ MISMO
+
+2-11. Agrega comentarios
+Elige dos de los programas que hayas escrito y agrega al menos un comentario en cada uno.
+Si tus programas son muy simples y no tienes nada específico que explicar aún, escribe tu nombre y la fecha actual en la parte superior de cada archivo, y una frase que describa qué hace el programa.
+
+---
+### El Zen de Python
+
+Los programadores experimentados de Python suelen promover la simplicidad por encima de la complejidad.
+La filosofía de la comunidad de Python está resumida en un breve texto llamado "El Zen de Python", escrito por Tim Peters.
+
+Puedes leerlo escribiendo lo siguiente en el intérprete de Python:
+
+```
+import this
+```
+No lo reproduciremos completo aquí, pero compartiremos algunas líneas clave para ayudarte a comprender por qué esta filosofía es importante para ti como nuevo programador de Python:
+
+#### The Zen of Python, by Tim Peters
+
+Lo bello es mejor que lo feo.
+
+Los programadores de Python creen que el código puede ser bello y elegante.
+En programación, resolvemos problemas, y las soluciones bien diseñadas, eficientes e incluso hermosas siempre han sido valoradas.
+
+A medida que escribas más código en Python, quizás alguien lo vea y diga:
+
+    “¡Guau, qué código tan hermoso!”
+
+Lo simple es mejor que lo complejo.
+
+Si tienes que elegir entre una solución simple y una compleja (y ambas funcionan), usa la simple.
+Será más fácil de mantener y más fácil de entender para ti y para otros.
+
+Lo complejo es mejor que lo complicado.
+
+A veces, los problemas del mundo real no pueden resolverse de forma sencilla. En esos casos, usa la solución más sencilla posible que funcione.
+
+La legibilidad cuenta.
+
+Incluso cuando tu código sea complejo, intenta que sea legible.
+Si trabajas en un proyecto que requiere código complicado, asegúrate de escribir comentarios informativos para que otros puedan entenderlo fácilmente.
+
+Debe haber una (y preferiblemente solo una) forma obvia de hacerlo.
+
+Cuando dos programadores de Python intentan resolver el mismo problema, deberían encontrar soluciones similares.
+Esto no significa que no haya espacio para la creatividad; ¡hay mucho!
+Pero en general, los buenos programas se construyen usando enfoques comunes y claros dentro de proyectos más grandes y creativos.
+
+Ahora es mejor que nunca.
+
+Podrías pasar años aprendiendo todos los detalles de Python, pero nunca terminarías un proyecto.
+No esperes a saberlo todo para empezar. Escribe código que funcione, y después decide si lo mejorarás o pasarás a algo nuevo.
+ 
+---
+### PRUÉBALO TÚ MISMO
+
+2-12. El Zen de Python
+Abre una terminal interactiva de Python, escribe import this y lee todos los principios del Zen de Python.
+Reflexiona sobre cómo pueden ayudarte a escribir mejor código.
+
+---
+
+## Resumen
+
+En este capítulo aprendiste a:
+
+    Usar variables con nombres descriptivos.
+
+    Resolver errores comunes de nombre y sintaxis.
+
+    Trabajar con cadenas de texto, usarlas en minúsculas, mayúsculas y formato título.
+
+    Utilizar espacios en blanco para organizar la salida.
+
+    Eliminar espacios innecesarios de las cadenas.
+
+    Trabajar con números enteros y flotantes, y realizar operaciones matemáticas.
+
+    Escribir comentarios explicativos para que tu código sea más claro para ti y para otros.
+
+    Adoptar la filosofía de simplicidad y claridad en la programación.
+
+En el Capítulo 3, aprenderás a almacenar colecciones de información usando una estructura llamada listas, y a manipular cualquier dato dentro de ellas.
