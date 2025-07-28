@@ -379,3 +379,220 @@ Usa del para eliminar los últimos dos nombres de la lista.
 Imprime la lista final para asegurarte de que esté vacía.
 
 ---
+
+## Organizar una lista
+
+Muchas veces, las listas se crean en un orden aleatorio o impredecible. Aunque no siempre puedes controlar ese orden, muchas veces querrás presentar la información en un orden específico.
+
+Python ofrece varias formas de ordenar listas, según tus necesidades:
+Ordenar una lista permanentemente con `sort()`
+
+El método `sort()` ordena una lista de forma permanente.
+Por ejemplo, si tienes una lista de automóviles y deseas ordenarlos alfabéticamente:
+
+```python
+autos = ['bmw', 'audi', 'toyota', 'subaru']
+autos.sort()
+print(autos)
+```
+
+Esto muestra:
+
+```shell
+['audi', 'bmw', 'subaru', 'toyota']
+```
+
+También puedes ordenarla en orden alfabético inverso con `reverse=True`:
+
+```python
+autos = ['bmw', 'audi', 'toyota', 'subaru']
+autos.sort(reverse=True)
+print(autos)
+```
+
+Resultado:
+
+```shell
+['toyota', 'subaru', 'bmw', 'audi']
+```
+Ordenar una lista temporalmente con `sorted()`
+
+Si no quieres modificar el orden original de la lista, puedes usar la función sorted():
+
+```python
+autos = ['bmw', 'audi', 'toyota', 'subaru']
+
+print("Lista original:")
+print(autos)
+
+print("\nLista ordenada:")
+print(sorted(autos))
+
+print("\nLista original nuevamente:")
+print(autos)
+```
+
+Resultado:
+
+```shell
+Lista original:
+['bmw', 'audi', 'toyota', 'subaru']
+
+Lista ordenada:
+['audi', 'bmw', 'subaru', 'toyota']
+
+Lista original nuevamente:
+['bmw', 'audi', 'toyota', 'subaru']
+```
+Puedes usar `sorted(autos, reverse=True)` para mostrarla ordenada alfabéticamente en sentido inverso sin modificar la lista original.
+
+    Nota: ordenar listas con mayúsculas y minúsculas puede ser más complejo. Este libro no abordará eso en detalle por ahora.
+
+### Imprimir una lista en orden inverso
+
+Si deseas invertir el orden de una lista (sin orden alfabético), puedes usar `reverse()`:
+
+```python
+autos = ['bmw', 'audi', 'toyota', 'subaru']
+autos.reverse()
+print(autos)
+```
+Esto muestra:
+
+```shell
+['subaru', 'toyota', 'audi', 'bmw']
+```
+
+Llamar a `reverse()` dos veces restaura el orden original.
+
+### Encontrar la longitud de una lista
+
+Para saber cuánt elementos hay en una lista, usa la función `len()`:
+
+```python
+autos = ['bmw', 'audi', 'toyota', 'subaru']
+print(len(autos))
+```
+Resultado:
+
+```
+4
+```
+    Nota: Python cuenta los elementos desde 1 al usar len(), pero los índices comienzan desde 0.
+
+---
+### INTÉNTALO TÚ MISMO
+3-8. Ver el mundo
+
+Piensa en al menos cinco lugares del mundo que te gustaría visitar.
+
+- Guarda esas ubicaciones en una lista (que no esté ordenada alfabéticamente).
+
+- Imprime la lista en su orden original.
+
+- Usa sorted() para mostrar la lista en orden alfabético sin modificarla.
+
+- Muestra que la lista sigue en su orden original.
+
+- Usa sorted() con reverse=True para mostrar la lista en orden alfabético inverso.
+
+- Vuelve a mostrar la lista para comprobar que no cambió.
+
+- Usa reverse() para invertir el orden original.
+
+- Usa reverse() otra vez para restaurarlo.
+
+- Usa sort() para ordenar la lista permanentemente.
+
+    
+- Usa sort(reverse=True) para ordenarla de forma permanente en orden inverso.
+
+3-9. Invitados a cenar
+
+Con uno de los programas anteriores (ejercicio 3-4 a 3-7), usa len() para mostrar cuántas personas están invitadas a cenar.
+
+3-10. Cada función
+
+Piensa en una categoría de cosas que podrías almacenar en una lista (montañas, ríos, países, etc.).
+Escribe un programa que cree una lista con esos elementos y utiliza cada función que se presentó en este capítulo al menos una vez.
+
+---
+### Evitar errores de índice al trabajar con listas
+
+Hay un tipo de error que es muy común cuando trabajas con listas por primera vez.
+Supongamos que tienes una lista con tres elementos y tratas de acceder al cuarto:
+```python
+motocicletas = ['honda', 'yamaha', 'suzuki']
+print(motocicletas[3])
+```
+Este ejemplo produce un error de índice:
+```shell
+Traceback (most recent call last):
+  File "motocicletas.py", line 2, in <module>
+    print(motocicletas[3])
+IndexError: list index out of range
+```
+Python intenta darte el elemento con índice 3, pero al revisar la lista no encuentra ningún elemento en esa posición.
+Esto ocurre porque la indexación en las listas comienza en 0, no en 1.
+Es común pensar que el “tercer” elemento está en el índice 3, pero en realidad está en el índice 2:
+
+    Primer elemento → índice 0
+
+    Segundo elemento → índice 1
+
+    Tercer elemento → índice 2
+
+Un IndexError significa que Python no pudo encontrar un elemento en la posición que pediste.
+Si te ocurre este error, prueba restar 1 al índice y ejecuta de nuevo el programa para ver si se soluciona.
+Acceder al último elemento de una lista con -1
+
+Cuando quieras acceder al último elemento de una lista, puedes usar el índice -1.
+Esto siempre funcionará, incluso si el tamaño de la lista ha cambiado desde la última vez:
+
+motocicletas = ['honda', 'yamaha', 'suzuki']
+print(motocicletas[-1])
+
+Este código imprimirá:
+
+suzuki
+
+Sin embargo, este enfoque provocará un error si la lista está vacía:
+
+motocicletas = []
+print(motocicletas[-1])
+
+Python no puede devolver un elemento inexistente, así que lanzará otro error de índice:
+
+Traceback (most recent call last):
+  File "motocicletas.py", line 3, in <module>
+    print(motocicletas[-1])
+IndexError: list index out of range
+
+Cómo depurar errores de índice
+
+Si te ocurre un error de índice y no estás seguro de por qué, intenta imprimir la lista completa o usar len() para ver cuántos elementos tiene.
+A veces la lista no es como esperabas, especialmente si el programa la ha modificado dinámicamente.
+
+Ver el contenido real de la lista, o su longitud exacta, puede ayudarte a detectar el problema.
+INTÉNTALO TÚ MISMO
+3-11. Error intencional
+
+Si aún no has obtenido un IndexError en tus programas, intenta provocarlo.
+Modifica uno de tus programas para acceder a un índice fuera del rango de la lista.
+Luego corrige el error antes de cerrar el programa.
+Resumen
+
+En este capítulo aprendiste:
+
+    Qué son las listas y cómo trabajar con sus elementos.
+
+    Cómo definir, agregar y eliminar elementos.
+
+    Cómo ordenarlas de manera permanente y temporal.
+
+    Cómo encontrar la longitud de una lista con len().
+
+    Cómo evitar errores de índice al trabajar con posiciones inexistentes.
+
+En el Capítulo 4, aprenderás a trabajar con los elementos de una lista de forma más eficiente.
+Aprenderás a recorrer cada elemento con solo unas pocas líneas de código, lo cual te permitirá trabajar incluso con listas que tengan miles o millones de elementos.
