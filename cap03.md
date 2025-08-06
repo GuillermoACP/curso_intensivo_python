@@ -542,46 +542,58 @@ Es común pensar que el “tercer” elemento está en el índice 3, pero en rea
 
     Tercer elemento → índice 2
 
-Un IndexError significa que Python no pudo encontrar un elemento en la posición que pediste.
+Un `IndexError` significa que Python no pudo encontrar un elemento en la posición que pediste.
 Si te ocurre este error, prueba restar 1 al índice y ejecuta de nuevo el programa para ver si se soluciona.
 Acceder al último elemento de una lista con -1
 
 Cuando quieras acceder al último elemento de una lista, puedes usar el índice -1.
 Esto siempre funcionará, incluso si el tamaño de la lista ha cambiado desde la última vez:
 
+```python
 motocicletas = ['honda', 'yamaha', 'suzuki']
 print(motocicletas[-1])
+```
 
 Este código imprimirá:
 
+```shell
 suzuki
+```
 
 Sin embargo, este enfoque provocará un error si la lista está vacía:
 
+```python
 motocicletas = []
 print(motocicletas[-1])
+```
 
 Python no puede devolver un elemento inexistente, así que lanzará otro error de índice:
 
+```shell
 Traceback (most recent call last):
   File "motocicletas.py", line 3, in <module>
     print(motocicletas[-1])
 IndexError: list index out of range
+```
 
-Cómo depurar errores de índice
+### Cómo depurar errores de índice
 
-Si te ocurre un error de índice y no estás seguro de por qué, intenta imprimir la lista completa o usar len() para ver cuántos elementos tiene.
+Si te ocurre un error de índice y no estás seguro de por qué, intenta imprimir la lista completa o usar `len()` para ver cuántos elementos tiene.
+
 A veces la lista no es como esperabas, especialmente si el programa la ha modificado dinámicamente.
 
 Ver el contenido real de la lista, o su longitud exacta, puede ayudarte a detectar el problema.
-INTÉNTALO TÚ MISMO
+---
+### INTÉNTALO TÚ MISMO
 3-11. Error intencional
 
 Si aún no has obtenido un IndexError en tus programas, intenta provocarlo.
 Modifica uno de tus programas para acceder a un índice fuera del rango de la lista.
 Luego corrige el error antes de cerrar el programa.
-Resumen
 
+---
+
+## Resumen
 En este capítulo aprendiste:
 
     Qué son las listas y cómo trabajar con sus elementos.
